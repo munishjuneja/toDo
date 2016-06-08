@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
 		@item = current_user.items.build(item_params)
 
 		if @item.save
-			redirect_to @item
+			redirect_to root_path
 		else
 			render 'new'
 		end
